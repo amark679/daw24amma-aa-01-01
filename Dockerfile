@@ -16,8 +16,6 @@ WORKDIR /var/www/html
 
 # 4. COPIAR ARCHIVOS (Aquí está el truco)
 COPY . .
-# Forzamos la copia del .env por si acaso se estaba ignorando
-COPY .env .env
 
 # 5. Instalar librerías de PHP (Vendor)
 RUN composer install --no-dev --optimize-autoloader
